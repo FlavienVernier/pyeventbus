@@ -1,8 +1,8 @@
 from Singleton import *
-import thread
+import _thread
 import threading
 import time, sys
-from Queue import Queue
+from queue import Queue
 from threading import Thread
 from multiprocessing.dummy import Pool as ThreadPool
 import multiprocessing
