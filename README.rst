@@ -14,7 +14,7 @@ pyeventbus3 is a publish/subscribe event bus for Python 3. (Fork of pyeventbus f
 + has advanced features like delivery threads, workers and spawning different processes, etc.
 + is tiny (3KB archive) 
 
-pyeventbus in 3 steps:
+pyeventbus3 in 3 steps:
 
 1. Define events::
         
@@ -25,7 +25,7 @@ pyeventbus in 3 steps:
                  
 2. Prepare subscribers: Declare and annotate your subscribing method, optionally specify a thread mode::
 
-            from pyeventbus import *
+            from pyeventbus3.pyeventbus3 import *
             
             @subscribe(onEvent=MessageEvent)
             def func(self, event):
@@ -35,7 +35,7 @@ pyeventbus in 3 steps:
    
    Register your subscriber. For example, if you want to register a class in Python::
             
-            from pyeventbus import *
+            from pyeventbus3.pyeventbus3 import *
             
             class MyClass:
                 def __init__(self):
@@ -51,7 +51,7 @@ pyeventbus in 3 steps:
             
 3. Post events::
         
-            from pyeventbus import *
+            from pyeventbus3.pyeventbus3 import *
             
             class MyClass:
                 def __init__(self):
@@ -122,12 +122,12 @@ Modes: pyeventbus can run the subscribing methods in 5 different modes
  
 Adding pyeventbus to your project::
 
-    pip install pyeventbus
+    pip install pyeventbus3
 
  
 Example::
     
-    git clone https://github.com/n89nanda/pyeventbus.git
+    git clone https://github.com/FlavienVernier/pyeventbus.git
     
     cd pyeventbus
     

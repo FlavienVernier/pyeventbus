@@ -1,4 +1,4 @@
-from pyeventbus import *
+from pyeventbus3.pyeventbus3 import *
 import time
 
 class Events:
@@ -26,7 +26,7 @@ class A:
     
     @subscribe(threadMode = Mode.PARALLEL, onEvent=Events.EventFromB)
     def readEventFromB(self, event):
-        print 'Class A', event.getMessage()
+        print('Class A:', event.getMessage())
 
 
 class B:
@@ -39,7 +39,7 @@ class B:
 
     @subscribe( threadMode = Mode.BACKGROUND, onEvent=Events.EventFromA)
     def readEventFromA(self, event):
-        print 'Class B:', event.getMessage()
+        print('Class B:', event.getMessage())
     
     def post(self):
         PyBus.Instance().post(Events.EventFromB("EventFromB"))
