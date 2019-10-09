@@ -1,4 +1,4 @@
-from pyeventbus import *
+from pyeventbus3 import *
 from timeit import default_timer as timer
 import numpy
 import sys
@@ -222,7 +222,7 @@ if __name__ == '__main__':
     executer = PerformanceExecuter()
     executer.register(executer)
 
-    print sys.argv[1:][0]
+    print(sys.argv[1:][0])
     arg = sys.argv[1:][0]
     if arg == 'startNetworkHeavyTestInMain': tester.startNetworkHeavyTestInMain()
     elif arg == 'startNetworkHeavyTestInBackground': tester.startNetworkHeavyTestInBackground()

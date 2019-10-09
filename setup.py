@@ -7,13 +7,12 @@ def readme():
 
 
 setup(name='pyeventbus3',
-      version='0.6',
+      version='0.8',
       description='A Python EventBus',
       long_description=readme(),
       classifiers=[
-        'Development Status :: 4 - Alpha',
+        'Development Status :: 3 - Alpha',
         'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Framework :: Flask',
         'Intended Audience :: Developers',

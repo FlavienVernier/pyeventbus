@@ -1,1 +1,1 @@
-from pyeventbus import *
+from pyeventbus3 import *

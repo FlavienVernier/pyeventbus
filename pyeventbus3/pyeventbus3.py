@@ -111,7 +111,7 @@ class PyBusThread (threading.Thread):
     def run(self):
         self.method(self.subscriber, self.event)
 
-from pyeventbus import Mode
+from pyeventbus3 import Mode
 def subscribe(threadMode = Mode.POSTING, onEvent = None):
     bus = PyBus.Instance()
     def real_decorator(function):
