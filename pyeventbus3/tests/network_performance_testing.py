@@ -1,4 +1,4 @@
-from pyeventbus3 import *
+from pyeventbus3.pyeventbus3 import *
 from timeit import default_timer as timer
 import numpy
 import sys

@@ -1,4 +1,5 @@
-from Singleton import *
+from pyeventbus3.pyeventbus3 import *
+from pyeventbus3.Singleton import *
 import _thread
 import threading
 import time, sys
@@ -111,7 +112,7 @@ class PyBusThread (threading.Thread):
     def run(self):
         self.method(self.subscriber, self.event)
 
-from pyeventbus3 import Mode
+from pyeventbus3.pyeventbus3 import Mode
 def subscribe(threadMode = Mode.POSTING, onEvent = None):
     bus = PyBus.Instance()
     def real_decorator(function):
