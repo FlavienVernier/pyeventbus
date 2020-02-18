@@ -15,4 +15,7 @@ python3 performance_testing.py startCPUHeavyTestInBackground
 python3 performance_testing.py startCPUHeavyTestInGreenlet
 python3 performance_testing.py startCPUHeavyTestInParallel
 python3 performance_testing.py startCPUHeavyTestInConcurrent
+python3 threadPool_performance_testing.py startCPUHeavyTestInBackground 0
+python3 threadPool_performance_testing.py startCPUHeavyTestInBackground 1
+python3 threadPool_performance_testing.py startCPUHeavyTestInBackground 5
 

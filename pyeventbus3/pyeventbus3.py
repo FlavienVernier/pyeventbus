@@ -10,6 +10,8 @@ import multiprocessing
 import gevent, os
 exitFlag = 0
 
+default_conf = {'max_threads':10}
+
 @Singleton
 class PyBus:
     
@@ -18,12 +20,11 @@ class PyBus:
     event_method = {}
     method_mode = {}
 
-    def __init__(self):
+    def __init__(self, conf = default_conf):
         self.common_background_thread = PyBusThread(0, "PyBusBackgroundThread", 1)
         self.queue = Queue(maxsize=0)
-        self.num_threads = 2000
+        self.num_threads = conf['max_threads']
         for worker in [lambda: self.startWorkers() for i in range(self.num_threads)]: worker()
-        
 
     def startWorkers(self):
         worker =Thread (target=self.monitorQueue, args=(self.queue,))

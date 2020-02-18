@@ -108,6 +108,7 @@ Modes: pyeventbus can run the subscribing methods in 5 different modes
         # Do something
         pass
 
+    There is 10 workers by default, see exemple to modify this number.
 
 3. CONCURRENT::
 

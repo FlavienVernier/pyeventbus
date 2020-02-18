@@ -1,6 +1,8 @@
 from pyeventbus3.pyeventbus3 import *
 import time
 
+PyBus.Configure(conf = {'max_threads':5})
+
 class Events:
     class EventFromA:
         def __init__(self, msg):

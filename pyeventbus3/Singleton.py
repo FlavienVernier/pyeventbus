@@ -30,6 +30,17 @@ class Singleton:
             self._instance = self._decorated()
             return self._instance
 
+    def Configure(self, conf):
+        """
+        Configure the singleton instance if it doas not exist yet. Upon its 
+        first call, it creates a new instance of the decorated class and calls 
+        its `__init__` method. On all subsequent calls, it raise an error.
+        """
+        if hasattr(self, '_instance'):
+            raise TypeError('Singletons must be configured once and before first call of `Instance()`.')
+        else:
+            self._instance = self._decorated(conf)
+        
     def __call__(self):
         raise TypeError('Singletons must be accessed through `Instance()`.')
 
